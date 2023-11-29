@@ -35,6 +35,6 @@ export async function POST({ request }) {
 		return json({ success: true, message: 'DB updated' });
 	} catch (e) {
 		console.log(e);
-		return json({ success: false, message: 'Unknown server error' }, { status: 500 });
+		return json({ success: false, message: e }, { status: 500 });
 	}
 }
